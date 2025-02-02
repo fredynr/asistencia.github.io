@@ -13,12 +13,19 @@
     <title>Fernando2</title>
   </head>
   <body>
-    <div class="fixed">
-      <img src="images/marcas/WhatsApp.svg" alt="">
+    <div class="modal" id="modal">
+      <div class="container-modal">
+        <h1 id="title-modal"></h1>
+        <p id="p-modal"></p>
+        <button class="btn-blue" id="cerrar-modal">Cerrar</button>
+      </div>
     </div>
-    <div class="bar-menu bar-menu__ul-home">
+    <div class="fixed">
+      <img src="images/marcas/WhatsApp.svg" alt="" />
+    </div>
+    <div class="bar-menu bar-menu__ul-pages" id="menu">
       <ul class="bar-menu__ul">
-        <img src="images/logoW.jpg" alt="" width="100" />
+        <!-- <img src="images/logoW.jpg" alt="" width="100" /> -->
         <a href="index.html">
           <li>Inicio</li>
         </a>
@@ -58,6 +65,11 @@
         </div>
       </figure>
       <article class="banner__article">
+        <div class="logo">
+          <h1 class="txt-font">INGENIERÍA Y SERVICIOS</h1>
+          <h2 class="txt-font">ASISTENCIA</h2>
+          <h3>TÉCNICA</h3>
+        </div>
         <div class="article__div blue" id="article__div">
           <img src="images/tool1.svg" class="div__img" alt="" />
           <span class="div__span" id="div__span">Prestación de:</span>
@@ -140,6 +152,41 @@
               </figcaption>
             </figure>
           </div>
+
+          <div class="products">
+            <figure class="products__figure">
+              <img src="images/cafeteraEmpotre.png" alt="" />
+              <figcaption class="products__caption">
+                <div>
+                  <h3>Fulgor Milano</h3>
+                  <p>
+                    El sistema esta equipado con un modo de espera de bajo
+                    consumo y un amplio sistema de seguridad: luz de advertencia
+                    de falta de agua, falta de cafe, necesidad de ciclo de
+                    limpieza y sustitucion del filtro de cal. El acceso a los
+                    compartimentos de servicio se realiza mediante una apertura
+                    telescopica.
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="products__figure">
+              <img src="images/cafeteraEvo.jpg" alt="" />
+              <figcaption class="products__caption">
+                <div><b>Modelo:</b><span>Magnifica Evo Milk</span></div>
+                <div><b>Linea:</b><span>Automática</span></div>
+                <button class="btn-white" id="btn-evo-milk">Más info</button>
+              </figcaption>
+            </figure>
+            <figure class="products__figure">
+              <img src="images/cafeteraStartMilk.png" alt="" />
+              <figcaption class="products__caption">
+                <div><b>Modelo:</b><span>Magnifica Start Milk</span></div>
+                <div><b>Linea:</b><span>Automática</span></div>
+                <button class="btn-white" id="btn-start-milk">Más info</button>
+              </figcaption>
+            </figure>
+          </div>
         </article>
       </div>
       <div>
@@ -171,28 +218,85 @@
           <span>DESTACADO</span>
           <div class="blanca">
             <figure>
-              <img src="images/estufaPP.png" alt="" />
+              <img src="images/blanca/estufa300.jpg" alt="" />
               <figcaption>Estufas</figcaption>
             </figure>
             <figure>
-              <img src="images/induccion.png" alt="" />
+              <img src="images/blanca/induccion.jpg" alt="" />
               <figcaption>Cubiertas de Inducción</figcaption>
             </figure>
             <figure>
-              <img src="images/horno.png" alt="" />
+              <img src="images/blanca/horno.jpg" alt="" />
               <figcaption>Hornos</figcaption>
             </figure>
             <figure>
-              <img src="images/lava-platos.png" alt="" />
-              <figcaption>Neveras Minibar</figcaption>
+              <img src="images/blanca/lava-platos.jpg" alt="" />
+              <figcaption>Lavaplatos</figcaption>
             </figure>
             <figure>
-              <img src="images/lavadorapp.png" alt="" />
+              <img src="images/blanca/lavadora.jpg" alt="" />
               <figcaption>Lavadoras</figcaption>
             </figure>
             <figure>
-              <img src="images/neverapp.png" alt="" />
+              <img src="images/blanca/nevera.jpg" alt="" />
               <figcaption>Neveras</figcaption>
+            </figure>
+            <!-- faltan 3 -->
+            <figure class="flip">
+              <div class="face front">
+                <img src="images/blanca/campana-isla-3288c11r.jpg" alt="" />
+              </div>
+              <ul class="face back">
+                <li>Campana de isla de 90cm</li>
+                <li>Capacidad absorción 700m3/h</li>
+                <li>Tres (3) Velocidades</li>
+                <li>Swith electrónico</li>
+                <li>Lámpara LED 3*1 W</li>
+                <li>Filtro de carbón activo</li>
+                <li>Ducto extensible de 60cm a 110cm</li>
+                <li>Una (1) trampa antigrasa en aluminio</li>
+                <li>Funcionamiento 110v-60Hz</li>
+              </ul>
+              <figcaption>Campana de Isla 3288C1IR</figcaption>
+            </figure>
+            <figure class="flip">
+              <div class="face front">
+                <img src="images/blanca/campana-isla-rainbow.jpg" alt="" />
+              </div>
+              <ul class="face back">
+                <li>Campana de Isla cilíndrica</li>
+                <li>Colores : Negro, blanco y naranja</li>
+                <li>41 cm</li>
+                <li>Versión filtrante</li>
+                <li>Capacidad absorción 750 m3/h</li>
+                <li>Pantalla de comando Touch control</li>
+                <li>Tres (3) velocidades</li>
+                <li>Lámparas LED 12V,8W</li>
+                <li>1 Filtro malla de carbón</li>
+                <li>Incluye dos (2) filtros malla</li>
+                <li>Trampa antigrasa de Aluminio lavable</li>
+              </ul>
+              <figcaption>Campana de isla RAINBOW – IAR 833 Blanco</figcaption>
+            </figure>
+            <figure class="flip">
+              <div class="face front">
+                <img src="images/blanca/campanaDownDraft.jpg" alt="" />
+              </div>
+              <ul class="face back">
+                <li>Campana down draft de 90 cm de ancho</li>
+                <li>Vidrio templado Negro</li>
+                <li>Control táctil deslizante AYD-033</li>
+                <li>Luz led rectangular LED 2*1,5w</li>
+                <li>Capacidad absorción 1000 m3/h</li>
+                <li>Cuatro (4) velocidades</li>
+                <li>Elevación Automática</li>
+                <li>Incluye filtro de carbón en malla</li>
+                <li>Un (1) filtro anti grasas en aluminio</li>
+                <li>Acero inoxidable</li>
+                <li>Funcionamiento: 110V</li>
+                <li>Frecuencia: 60Hz</li>
+              </ul>
+              <figcaption>Campana Down Draft 3588FD900</figcaption>
             </figure>
           </div>
         </article>
@@ -265,6 +369,13 @@
       <div><img src="images/marcas/marriot.png" alt="" /></div>
       <div><img src="images/marcas/coviandes.png" alt="" /></div>
     </div>
+    <div class="marcas">
+      <div><img src="images/marcas/ahk.png" alt="" /></div>
+      <div><img src="images/marcas/louis.png" alt="" /></div>
+      <div><img src="images/marcas/kpmg.png" alt="" /></div>
+      <div><img src="images/marcas/cma.png" alt="" /></div>
+      <div><img src="images/marcas/valorem.png" alt="" /></div>
+    </div>
     <footer>
       <div>
         <img src="images/logoW.jpg" alt="" class="footer__logo" />
@@ -290,17 +401,15 @@
           </figure>
           <figure>
             <img src="images/marcas/direccion.svg" alt="" />
-            <figcaption>Lorem, ipsum dolor.</figcaption>
+            <figcaption>Bogotá - Colombia</figcaption>
           </figure>
         </div>
       </div>
       <div>
-        <img src="images/marcas/qr.png" alt="" class="qr">
+        <img src="images/marcas/qr.png" alt="" class="qr" />
       </div>
     </footer>
     <script src="my_scripts.js"></script>
-    <script>
-
-    </script>
+    <script></script>
   </body>
 </html>

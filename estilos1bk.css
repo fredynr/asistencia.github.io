@@ -18,7 +18,6 @@ html {
   --analogo-blue: #002147;
   --azul-claro: #669999;
   --verde-adobe: #9ce3f7;
-  --grey-txt: #bdbdbd;
 }
 a {
   text-decoration: none;
@@ -30,7 +29,6 @@ body {
   background-color: #f7fbfc;
   font-weight: 400;
 }
-
 .btn-blue {
   background: var(--analogo-blue);
   border: none;
@@ -92,21 +90,21 @@ body {
 .bar-menu {
   position: absolute;
   width: 98vw;
-  transition: top 0.3s, opacity 0.3s;
-  opacity: 1;
   z-index: 1000;
 }
 .bar-menu__ul {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
-
+.bar-menu__ul-home a {
+  color: #fff;
+}
 .bar-menu__ul-pages {
-  position: fixed;
-  width: 100%;
+  position: relative;
+  width: inherit;
   background-color: #fff;
-  box-shadow: 0px 2px 8px #272626;
+  box-shadow: 0px 0px 2px #757575;
 }
 .bar-menu__ul-pages a {
   color: #000;
@@ -119,11 +117,8 @@ body {
 .bar-menu__ul li {
   font-weight: 300;
   font-size: 1rem;
-  margin: 0.8rem 0.8rem 1rem 1rem;
-}
-.bar-menu.oculto {
-  top: -50px; /* Ajusta este valor según la altura de tu menú */
-  opacity: 0;
+  border-bottom: 1px solid;
+  margin: 1rem 2rem 1rem 1rem;
 }
 
 .banner {
@@ -162,6 +157,7 @@ body {
   font-size: 4.3rem;
   letter-spacing: 8px;
 }
+
 .figure__img {
   width: 600px;
   box-shadow: 0px 0px 9px #000;
@@ -246,7 +242,7 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  transform: translateY(-2.8rem);
+  transform: translateY(-3.8rem);
   z-index: 901;
 }
 .services__ul {
@@ -311,6 +307,11 @@ body {
   border-bottom: 1px solid #bdbdbd;
   padding-top: 1.4rem;
 }
+.products {
+  background-color: var(--analogo-blue);
+  padding: 1rem;
+}
+
 .products,
 .blanca {
   display: flex;
@@ -333,6 +334,68 @@ body {
 .products > figure > img,
 .blanca > figure > img {
   width: 300px;
+}
+.products_left {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.products_left:hover .left-txt{
+  opacity: 1;
+  transition: opacity 0.7s ease-in;
+}
+.left-txt {
+  opacity: 0;
+  position: absolute;
+  margin: 1rem;
+  color: #fff;
+  background: var(--analogo-blue);
+  max-width: 90%;
+  padding: 1rem;
+  text-align: justify;
+  font-weight: 300;
+}
+.left-txt h1 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+}
+.left-txt p{
+  line-height: 22px;
+}
+.products_right {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.products_right > figure {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .products_left {
+    width: 50%;
+  }
+  .products_left > img {
+    height: 623px;
+    width: auto;
+  }
+  .products_right {
+    width: 50%;
+  }
+  .products_right > figure {
+    width: 48%;
+  }
+  .products_right > figure > img {
+    width: 100%;
+    object-fit: contain;
+  }
 }
 
 .portafolio--blanca {
@@ -359,9 +422,7 @@ body {
   padding: 0px 8px;
   border-right: 1px solid;
 }
-.products__figure:hover {
-  box-shadow: 0px 8px 13px #bfbfbf;
-}
+
 .products__figure:hover .products__caption {
   opacity: 1;
 }
@@ -369,21 +430,15 @@ body {
   display: flex;
   position: absolute;
   background: var(--analogo-blue);
-  color: var(--grey-txt);
+  color: #fff;
   left: 0;
   width: 100%;
-  min-height: 50%;
-  padding: 1rem 0;
-  font-weight: 300;
-  line-height: 23px;
+  height: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.7s ease-in-out;
-}
-.products__caption h3 {
-  text-align: center;
 }
 .products__caption > div {
   width: 80%;
@@ -404,58 +459,6 @@ body {
   color: #fff;
   padding: 0.3rem 0rem 0.3rem 1rem;
   width: 50%;
-  z-index: 9;
-}
-.blanca > figure > ul {
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding: 1rem 2rem;
-  font-weight: 300;
-  line-height: 23px;
-}
-.blanca > figure > ul > li {
-  list-style: disc;
-}
-
-/* card */
-
-.flip .face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.flip .front {
-  transform: perspective(600px) rotateY(0deg);
-  box-shadow: 0 5px 10px #000;
-}
-
-.flip .front img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.flip .back {
-  transform: perspective(600px) rotateY(180deg);
-  background: rgb(3, 35, 54);
-  color: #f3f3f3;
-  box-shadow: 0 5px 10px #000;
-  z-index: 10;
-}
-.flip:hover .front {
-  transform: perspective(600px) rotateY(180deg);
-}
-
-.flip:hover .back {
-  transform: perspective(600px) rotateY(360deg);
 }
 
 /* carrusel */
